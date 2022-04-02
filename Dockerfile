@@ -1,8 +1,8 @@
-ARG TAG
-
-FROM rust:${TAG}
+FROM rust:1.59
 
 WORKDIR /src
+RUN apt update && apt upgrade -y
 
-RUN apk add musl-dev pkgconfig openssl-dev
-RUN cargo install cargo-watch
+# RUN apt update && apt install lld clang -y
+# RUN apt install libssl-dev
+# RUN cargo install cargo-watch

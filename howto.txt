@@ -1,0 +1,2 @@
+docker build --pull --rm -f "Dockerfile" -t  rustcontainer .
+docker run --rm -it  rustcontainer:latest
